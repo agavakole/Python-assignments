@@ -64,33 +64,35 @@ fives = 0
 toonies = 0
 loonies = 0
 
-amount_to_withdraw = int(input("Enter your amount "))
-if amount_to_withdraw >= 50:
-    fifties = amount_to_withdraw // 50
-    amount_to_withdraw %= 50
-    print(f"{fifties} x $50 bills")
-if amount_to_withdraw >= 20:
-    twenties = amount_to_withdraw // 20
-    amount_to_withdraw %= 20
-    print(f"{twenties} x $20 bills")
-if amount_to_withdraw >= 10:
-    tens = amount_to_withdraw // 10
-    amount_to_withdraw %= 10
-    print(f"{tens} x $10 bills")
-if amount_to_withdraw >= 5:
-    fives = amount_to_withdraw // 5
-    amount_to_withdraw %= 5
-    print(f"{fives} x $5 bills")
-if amount_to_withdraw >= 2:
-    toonies = amount_to_withdraw // 2
-    amount_to_withdraw %= 2
-    print(f"{toonies} x $2 coins")
-if amount_to_withdraw >= 1:
-    loonies = amount_to_withdraw // 1
-    amount_to_withdraw %= 1
-    print(f"{loonies} x $1 coin")
+amount_to_withdraw = int(input("Welcome to CIBC bank! How much would you like to witdraw? "))
+print(f'Cha-ching!\nYou asked for ${amount_to_withdraw}:')
+if amount_to_withdraw <= 0:
+    print("Please enter an amount greater than 0.")
 else:
-    print("Enter a number greater than 0")
+    if amount_to_withdraw >= 50:
+        fifties = amount_to_withdraw // 50
+        amount_to_withdraw %= 50
+        print(f"{fifties} x $50 bills")
+    if amount_to_withdraw >= 20:
+        twenties = amount_to_withdraw // 20
+        amount_to_withdraw %= 20
+        print(f"{twenties} x $20 bills")
+    if amount_to_withdraw >= 10:
+        tens = amount_to_withdraw // 10
+        amount_to_withdraw %= 10
+        print(f"{tens} x $10 bills")
+    if amount_to_withdraw >= 5:
+        fives = amount_to_withdraw // 5
+        amount_to_withdraw %= 5
+        print(f"{fives} x $5 bills")
+    if amount_to_withdraw >= 2:
+        toonies = amount_to_withdraw // 2
+        amount_to_withdraw %= 2
+        print(f"{toonies} x $2 coins")
+    if amount_to_withdraw >= 1:
+        loonies = amount_to_withdraw // 1
+        amount_to_withdraw %= 1
+        print(f"{loonies} x $1 coin")
 
 
 if __name__ == "__main__":
